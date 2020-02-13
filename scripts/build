@@ -56,6 +56,9 @@ else
     TAGS="static_build libsqlite3 $TAGS"
 fi
 
+# make gonum work with gccgo
+TAGS="$TAGS noasm"
+
 mkdir -p bin
 
 if [ -z "$GOARM" ] && [ "arm" = "$(go env GOARCH)" ]; then
