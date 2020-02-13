@@ -1,4 +1,5 @@
 #!/bin/bash
+set -x
 
 cd $(dirname $0)/..
 
@@ -10,7 +11,7 @@ CHARTS_DIR=build/static/charts
 
 mkdir -p ${CHARTS_DIR}
 
-curl --compressed -sfL https://github.com/rancher/k3s-root/releases/download/${ROOT_VERSION}/k3s-root-${ARCH}.tar | tar xf -
+cat $HOME/Downloads/rancher/k3s-root/releases/download/${ROOT_VERSION}/k3s-root-${ARCH}.tar | tar xf -
 ln -sf pigz bin/unpigz
 for target in iptables iptables-save iptables-restore ip6tables ip6tables-save ip6tables-restore; do
   ln -sf xtables-legacy-multi bin/$target
