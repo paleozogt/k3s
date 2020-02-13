@@ -13,7 +13,7 @@ fi
 
 GIT_TAG=${DRONE_TAG:-$(git tag -l --contains HEAD | head -n 1)}
 
-ARCH=$(go env GOARCH)
+ARCH=${ARCH:-$(go env GOARCH)}
 SUFFIX="-${ARCH}"
 
 VERSION_CONTAINERD=$(grep github.com/containerd/containerd go.mod | head -n1 | awk '{print $4}')
