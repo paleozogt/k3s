@@ -261,6 +261,19 @@ setup_verify_arch() {
             ARCH=arm
             SUFFIX=-${ARCH}hf
             ;;
+        ppc)
+            ARCH=ppc
+            SUFFIX=
+            ;;
+        ppc64)
+            ARCH=ppc64
+            SUFFIX=
+            ;;
+        ppc64le)
+            ARCH=ppc64le
+            SUFFIX=
+            ;;
+
         *)
             fatal "Unsupported architecture $ARCH"
     esac
