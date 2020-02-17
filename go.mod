@@ -9,6 +9,7 @@ replace (
 	github.com/containerd/console => github.com/containerd/console v0.0.0-20181022165439-0650fd9eeb50
 	github.com/containerd/containerd => github.com/paleozogt/containerd v0.0.0-20200214163514-3253d4adbc22
 	github.com/containerd/continuity => github.com/paleozogt/continuity v0.0.0-20200213225834-4797bfda30dc
+	golang.org/x/tools => github.com/paleozogt/golang-tools v0.0.0-20200217232916-4ed30299c111
 	github.com/containerd/cri => github.com/rancher/cri v1.3.0-k3s.3
 	github.com/containerd/fifo => github.com/containerd/fifo v0.0.0-20190816180239-bda0ff6ed73c
 	github.com/containerd/go-runc => github.com/containerd/go-runc v0.0.0-20190911050354-e029b79d8cda

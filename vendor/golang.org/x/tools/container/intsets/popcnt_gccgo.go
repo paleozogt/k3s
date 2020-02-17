@@ -6,4 +6,5 @@
 
 package intsets
 
+//extern popcount
 func popcount(x word) int

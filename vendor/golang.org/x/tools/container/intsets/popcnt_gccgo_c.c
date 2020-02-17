@@ -12,8 +12,6 @@
 #define _STRINGIFY_(x) _STRINGIFY2_(x)
 #define GOSYM_PREFIX _STRINGIFY_(__USER_LABEL_PREFIX__)
 
-extern intptr_t popcount(uintptr_t x) __asm__(GOSYM_PREFIX GOPKGPATH ".popcount");
-
 intptr_t popcount(uintptr_t x) {
 	return __builtin_popcountl((unsigned long)(x));
 }
