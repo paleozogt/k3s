@@ -135,7 +135,7 @@ func kubeletArgs(cfg *config.Agent) map[string]string {
 		argsMap["cpu-cfs-quota"] = "false"
 	}
 	if !controllers["pids"] {
-		logrus.Fatal("pids cgroup controller not found")
+		logrus.Warn("pids cgroup controller not found")
 	}
 	if kubeletRoot != "" {
 		argsMap["kubelet-cgroups"] = kubeletRoot
